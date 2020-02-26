@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heartbeat</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #heart {
+        position: relative;
+        margin-top: 100px;
+        margin-left: 100px;
+        display: inline-block;
+        animation: heart 700ms infinite reverse;
+      }
+      @keyframes heart {
+        0% {
+          transform: scale(1);
+        }
+        60% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1.4);
+        }
+      }
+      .left {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 100%;
+        left: -100%;
+        transform: rotate(45deg) translateX(70%);
+        border-radius: 50% 0 0 50%;
+        background: pink;
+      }
+      .right {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        transform: rotate(45deg) translateY(70%);
+        border-radius: 50% 50% 0 0;
+        background: pink;
+      }
+      .bottom {
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
+        background: pink;
+      }
+      .finger {
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+
+      .finger1 {
+        display: inline-block;
+        position: relative;
+      }
+      .finger1 > .finger1_1 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg);
+        background: rgb(252, 221, 200);
+        position: absolute;
+      }
+      .finger1 > .finger1_2 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateY(-99%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+      }
+      .finger1 > .finger1_3 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateY(-198%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+        border-radius: 50% 50% 0 0;
+      }
+      .finger2 {
+        display: inline-block;
+        position: relative;
+      }
+      .finger2 > .finger2_1 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateX(-50%) translateY(6%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+      }
+      .finger2 > .finger2_2 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateX(-149%) translateY(6%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+        border-radius: 50% 0 0 50%;
+      }
+      .finger2 > .finger2_3 {
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg) translateX(-170%) translateY(5%);
+        background: rgb(214, 130, 157);
+        position: absolute;
+        border-radius: 50% 0 0 50%;
+        z-index: 1;
+      }
+      .finger3 {
+        display: inline-block;
+        position: relative;
+      }
+      .finger3 > .finger3_1 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateX(-50%) translateY(6%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+      }
+      .finger3 > .finger3_2 {
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translateX(-149%) translateY(6%);
+        background: rgb(252, 221, 200);
+        position: absolute;
+        border-radius: 50% 0 0 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heart">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+    </div>
+    <div class="finger">
+      <div class="finger1">
+        <div class="finger1_1"></div>
+        <div class="finger1_2"></div>
+        <div class="finger1_3"></div>
+      </div>
+      <div class="finger2">
+        <div class="finger2_1"></div>
+        <div class="finger2_2"></div>
+        <div class="finger2_3"></div>
+      </div>
+      <div class="finger3">
+        <div class="finger3_1"></div>
+        <div class="finger3_2"></div>
+      </div>
+    </div>
+  </body>
+</html>
